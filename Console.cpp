@@ -1,5 +1,5 @@
 /*
-	v 0.1
+	v 0.2
 */
 #include <iostream>
 #include <vector>
@@ -28,6 +28,27 @@ void printVector(std::vector<std::string>& vct) {
 }
 
 void print2DVector(std::vector<std::vector<int>>& vct) {
+	for (const auto& row : vct) {
+		for (const auto& col : row) {
+			std::cout << col << "\t";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+	return;
+}
+
+void print2DVector(std::vector<std::vector<std::string>>& vct) {
+	for (const auto& row : vct) {
+		for (const auto& col : row) {
+			std::cout << col << "\t";
+		}
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
+	return;
+}
+void print2DVector(std::vector<std::vector<char>>& vct) {
 	for (const auto& row : vct) {
 		for (const auto& col : row) {
 			std::cout << col << "\t";
